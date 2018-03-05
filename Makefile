@@ -7,5 +7,5 @@ endif
 RUN=python$(PYVERSION) -m coverage run -a --source src
 
 test:
-        $(COVERAGE) erase
-        $(RUN) src/FSITM.py
+	$(COVERAGE) erase
+	$(RUN) src/FSITM.py

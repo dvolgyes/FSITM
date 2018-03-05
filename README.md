@@ -4,7 +4,6 @@ Feature similarity index for tone mapped images (FSITM) - revised
 Travis CI: [![Build Status](https://travis-ci.org/dvolgyes/FSITM.svg?branch=master)](https://travis-ci.org/dvolgyes/FSITM)
 Semaphore: [![Build Status](https://semaphoreci.com/api/v1/dvolgyes/FSITM/branches/master/badge.svg)](https://semaphoreci.com/dvolgyes/fsitm)
 CircleCI: [![CircleCI](https://circleci.com/gh/dvolgyes/FSITM.svg?style=svg)](https://circleci.com/gh/dvolgyes/FSITM)
-AppVeyor: [![Build Status](https://img.shields.io/appveyor/ci/dvolgyes/FSITM.svg)](https://ci.appveyor.com/project/dvolgyes/FSITM)
 
 Coveralls: [![Coverage Status](https://img.shields.io/coveralls/github/dvolgyes/FSITM/master.svg)](https://coveralls.io/github/dvolgyes/FSITM?branch=master)
 Codecov: [![codecov](https://codecov.io/gh/dvolgyes/FSITM/branch/master/graph/badge.svg)](https://codecov.io/gh/dvolgyes/FSITM)
