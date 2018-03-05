@@ -1,4 +1,11 @@
 #!/usr/bin/make
 
+ifndef COVERAGE
+COVERAGE=python$(PYVERSION) -m coverage
+endif
+
+RUN=python$(PYVERSION) -m coverage run -a --source src
+
 test:
-	@echo No tests at this moment
+        $(COVERAGE) erase
+        $(RUN) src/FSITM.py
