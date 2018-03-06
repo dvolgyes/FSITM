@@ -24,7 +24,7 @@ from .phasecong100 import phasecong100
 
 
 @contract(HDR='array[NxM](float)', LDR='array[NxM](float)')
-def FSITM(HDR, LDR):
+def FSITM(HDR, LDR, alpha = None):
     """
     HDR: High dynamic range image
     LDR: Low dynamic range image
@@ -42,14 +42,17 @@ def FSITM(HDR, LDR):
     # Q: Quality index
     NumPixels = LDR.size
 
-    r = np.floor(NumPixels / (2. ** 18))
-    if r > 1.:
-        alpha = 1. - (1. / r)
-    else:
-        alpha = 0.
+    if alpha is None:
+        r = np.floor(NumPixels / (2. ** 18))
+        if r > 1.:
+            alpha = 1. - (1. / r)
+        else:
+            alpha = 0.
 
     minNonzero = np.min(HDR[HDR > 0])
     LogH = np.log(np.maximum(HDR, minNonzero))
+
+    # float is needed for further calculation
     LogH = np.round((LogH - LogH.min()) * 255. /
                     (LogH.max() - LogH.min())).astype(np.float)
 
