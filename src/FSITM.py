@@ -3,7 +3,7 @@
 import numpy as np
 from contracts import contract
 
-from phasecong100 import phasecong100
+from .phasecong100 import phasecong100
 
 #  Feature similarity index for tone mapped images (FSITM)
 #  By: Hossein Ziaei Nafchi, November 2014
@@ -75,7 +75,6 @@ def FSITM(HDR, LDR):
           LDR='array[NxM](float)',
           alpha='float,>=0.0,<=1.0')
 def FSITM_revised(HDR, LDR, alpha):
-
     # HDR: High dynamic range image
     # LDR: Low dynamic range image
     # Q: Quality index

@@ -5,7 +5,7 @@ import numpy as np
 from numpy.fft.fftpack import fft2, ifft2
 from numpy.fft import ifftshift
 from contracts import contract
-from lowpass_filter import lowpass_filter
+from .lowpass_filter import lowpass_filter
 
 # The orininal Matlab code is written by Peter Kovesi.
 # This python code is a translation of his Matlab code,
@@ -83,7 +83,7 @@ def phasecong100(im, nscale=2,
     sintheta = np.sin(theta)
     costheta = np.cos(theta)
 
-    lp = lowpass_filter((rows, cols), 0.45, 15.)
+    lp = lowpass_filter((rows, cols), 0.45, 15)
 
     logGabor = []
     for s in range(1, nscale + 1):
