@@ -18,7 +18,7 @@ setup(
     url='https://github.com/dvolgyes/FSITM',
     packages=['FSITM'],
     package_dir={'FSITM': 'src'},
-    scripts=[],
+    scripts=["src/FSITM.py",],
     data_files=[],
     keywords=['tone-mapping', 'image quality', 'metrics'],
     classifiers=[],
